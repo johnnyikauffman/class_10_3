@@ -1,0 +1,39 @@
+---
+title: "class_10_03"
+author: "Johnny Kauffman"
+date: "10/3/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(ggplot2)
+library(tidyverse)
+library(googlesheets4)
+
+
+```
+
+```{r}
+
+class_list <- read_sheet("1LtupNx8yBeJzK6UyGkZ5u-aUAPzU90K9C4r2RTJwWqg") %>% 
+  select("Student")
+
+cold_call <- function() {
+  sample_n(class_list,1)[1,1]
+}
+
+
+
+
+
+```
+
+
+
+
+
+> library(googlesheets4)
+> sheets_deauth()
+> x <- read_sheet("1cgP-e6THVfiW5TJ95QhX3jkNxKvc8Sicp9k_BkSRd2I")
